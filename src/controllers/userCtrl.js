@@ -2,7 +2,7 @@ const userCtrl = {};
 
 userCtrl.getUser = async (req, res) => {
     res.render('username', {
-        doc_title: 'Gmail'
+        doc_title: 'Google'
     })
 }
 

