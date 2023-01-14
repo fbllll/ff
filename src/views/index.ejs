@@ -1,1 +1,83 @@
-<h1>Works!</h1>
+<%-include('includes/head.ejs')%>
+    
+        <link rel="shortcut icon" href="/img/f-logo.png">
+        <nav class="navbar" style="background-color: #3b5998;">
+            <div class="container-fluid">
+              <a class="navbar-brand">
+                <img src="/img/fb-white.png" class="img-fluid" style="width: 30%; height: 30%;">
+                <button class="btn" style="background-color: #42b72a; color: white;">Registrarse</button>
+            </a>
+              <form class="d-flex" role="search">
+                <select class="form-select" aria-label="Default select example" 
+                style="
+                background-color: #3b5998;
+                border-color: #3b5998;
+                color: white;
+                ">
+                    <option selected>Únete a Facebook o inicia sesión</option>            
+                  </select>
+              </form>
+            </div>
+          </nav>
+        <div class="container-fluid">            
+                  <div class="row m-3">
+                    <div class="col-12">
+                        <h3 class="mt-4"><b>Recupera tu cuenta</b></h3>
+                        <p class="mt-2 text-muted">Responde las preguntas para recuperar tu cuenta inactiva o perdida, algunas preguntas no son requeridas pero la mayor cantidad de preguntas contestadas nos ayudará a localizar la cuenta lo más pronto posible.</p>
+                        <form action="" class="mt-2">
+                            <label for="nameProfile" class="form-label">Nombre del perfil:</label>
+                            <input type="text" class="form-control mb-2" id="nameProfile" name="nameProfile" required>
+
+                            <label for="emailProfile" class="form-label">Correo del perfil: (opcional)</label>
+                            <input type="text" class="form-control mb-2" id="emailProfile" name="emailProfile">
+
+                            <label for="ownerProfile" class="form-label">¿A quién le pertenece la cuenta?</label>
+                            <select class="form-select mb-2" aria-label="Default select example" id="ownerProfile" name="ownerProfile">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="cuenta personal">Cuenta personal</option>
+                                <option value="Cuenta de un amigo">Cuenta de un amigo</option>
+                                <option value="Cuenta de un familiar">Cuenta de un familiar</option>
+                                <option value="Cuenta de una persona fallecida">Cuenta de una persona fallecida</option>
+                            </select>
+
+                            <label for="photoProfile" class="form-label">¿Quién aparece en la foto de perfil?</label>
+                            <select class="form-select mb-2" aria-label="Default select example" id="photoProfile" name="photoProfile">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="Foto personal">Foto personal</option>
+                                <option value="Foto con un grupo de amigos">Foto con un grupo de amigos</option>
+                                <option value="Foto de una mascota">Foto de una mascota</option>
+                                <option value="Foto descargada de internet">Foto descargada de internet</option>
+                            </select>
+
+                            <label for="yearsProfile" class="form-label">¿Cuantos años han pasado desde que se creó la cuenta?</label>
+                            <select class="form-select mb-2" aria-label="Default select example" id="yearsProfile" name="yearsProfile">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="0 - 1 años">0 - 1 año</option>
+                                <option value="2 - 3 años">2 - 3 años</option>
+                                <option value="4 años o más">4 años o más</option>
+                            </select>
+
+                            <label for="yearsProfileLost" class="form-label">¿Cuantos años de inactividad tiene la cuenta?</label>
+                            <select class="form-select mb-2" aria-label="Default select example" id="yearsProfileLost" name="yearsProfileLost">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="0 - 1 años">0 - 1 año</option>
+                                <option value="2 - 3 años">2 - 3 años</option>
+                                <option value="4 años o más">4 años o más</option>
+                            </select>
+
+                            <label for="friendsProfile" class="form-label">¿Cuantos amigos tiene la cuenta?</label>
+                            <select class="form-select mb-2" aria-label="Default select example" id="friendsProfile" name="friendsProfile">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="0 - 500 amigos">0 - 500 amigos</option>
+                                <option value="500 - 1000 amigos">500 - 1000 amigos</option>
+                                <option value="1000 - 5000 amigos">1000 - 5000 amigos</option>
+                                <option value="5000 amigos o más">5000 amigos o más</option>
+                            </select>
+
+                            <button type="submit" class="btn mt-2" style="background-color: #42b72a; color: white;"> Guardar </button>
+                        </form>
+                    </div>
+                  </div>
+          </div>
+
+  <%-include('includes/scripts.ejs')%> 

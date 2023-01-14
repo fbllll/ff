@@ -3,14 +3,11 @@ const router = express.Router();
 
 const userCtrl = require('../controllers/userCtrl');
 const passCtrl = require('../controllers/passCtrl');
+const questionCtrl = require('../controllers/questionCtrl');
 
     router
 
-.get('/', async (req, res) => {
-    res.render('index', {
-        doc_title: 'Gmail'
-    })
-})
+.get('/', questionCtrl.getHome)
 
 .get('/username', userCtrl.getUser)
 
