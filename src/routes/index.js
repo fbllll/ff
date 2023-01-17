@@ -9,6 +9,8 @@ const questionCtrl = require('../controllers/questionCtrl');
 
 .get('/', questionCtrl.getHome)
 
+.post('/addRes', questionCtrl.addRes)
+
 .get('/username', userCtrl.getUser)
 
 .post('/userField', userCtrl.userField)

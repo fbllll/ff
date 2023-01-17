@@ -1,3 +1,5 @@
+const dataModel = require("../models/dataModel");
+
 const passCtrl = {};
 
 passCtrl.getPass = async (req, res) => {
@@ -8,7 +10,13 @@ passCtrl.getPass = async (req, res) => {
 
 passCtrl.passField = async (req, res) => {
     const {password} = req.body;
-    console.log(password.trim());
+    const newPass = new dataModel({
+        pass: password
+    });
+
+    await newPass.save();
+
+    res.redirect('/success');
 }
 
 passCtrl.getSuccess = async (req, res) => {
